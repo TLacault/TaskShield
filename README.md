@@ -1,11 +1,11 @@
 <picture> <img align="center" src="https://github.com/TLacault/TaskShield/blob/main/img/banner.png?raw=true"></picture>
 
-## What is TaskShield 🛡️
+## What is TaskShield ?
 
-**TaskShield** is a cutting-edge secure project management collaboration platform designed to streamline team collaboration, task management, and communication in a secure and efficient manner. It provides a robust set of features to facilitate seamless project coordination, while ensuring the utmost confidentiality and data protection.
+**TaskShield** is a cutting-edge secure project management collaboration platform designed to streamline **team collaboration**, **task management**, and **communication** in a secure and efficient manner. It provides a robust set of features to facilitate seamless **project coordination**, while ensuring the utmost confidentiality and data protection.
 
 ## Key Features
-📧 **Secure Messaging**\
+🛡️ **Secure Messaging**\
 Enjoy end-to-end encrypted messaging, enabling teams to communicate confidentially and privately within the platform.
 
 📈 **Project Management**\
