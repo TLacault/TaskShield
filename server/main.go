@@ -1,14 +1,16 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 
-	project "github.com/TLacault/TaskShield/server/project"
-	"github.com/TLacault/TaskShield/server/project/label"
-	person "github.com/TLacault/TaskShield/server/project/person"
-	task "github.com/TLacault/TaskShield/server/project/task"
+	tui "github.com/TLacault/TaskShield/server/tui"
+	// project "github.com/TLacault/TaskShield/server/project"
+	// label "github.com/TLacault/TaskShield/server/project/label"
+	// person "github.com/TLacault/TaskShield/server/project/person"
+	// task "github.com/TLacault/TaskShield/server/project/task"
 )
 
+/*
 func main() {
 	project := project.New("TaskShield", "Task management & Secure messaging application")
 
@@ -34,6 +36,9 @@ func main() {
 	project.GetTasks()[0].AddAssignee(project.GetMembers()[1])
 	project.GetTasks()[0].AddAssignee(project.GetMembers()[2])
 
+	project.GetTasks()[1].AddAssignee(project.GetMembers()[0])
+	project.GetTasks()[1].AddAssignee(project.GetMembers()[2])
+
 	project.GetTasks()[0].AddComment("This is a comment", project.GetMembers()[0])
 	project.GetTasks()[0].AddComment("This is another comment", project.GetMembers()[1])
 
@@ -43,4 +48,19 @@ func main() {
 	fmt.Print(project.ToStringFormat())
 	fmt.Print("----------------------------------------------------\n\n")
 	fmt.Println(project.ToString())
+	fmt.Print("\n----------------------------------------------------\n\n")
+
+	// search for member by name
+	person, err := project.GetMemberByName("Tim Lacault")
+	if err != nil {
+		fmt.Println("Error:", err)
+	} else {
+		fmt.Println(person.ToStringFormat())
+	}
+
+}
+*/
+
+func main() {
+	tui.Start()
 }

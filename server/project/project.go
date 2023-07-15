@@ -1,6 +1,9 @@
 package project
 
 import (
+	"errors"
+	"strings"
+
 	// comment "github.com/TLacault/TaskShield/server/project/comment"
 	person "github.com/TLacault/TaskShield/server/project/person"
 	task "github.com/TLacault/TaskShield/server/project/task"
@@ -27,10 +30,29 @@ func New(name string, description string) Project {
 
 /* ********************************************************************************************* */
 
-func (p *Project) GetName() string             { return p.name }
-func (p *Project) GetDescription() string      { return p.description }
-func (p *Project) GetTasks() []task.Task       { return p.tasks }
+func (p *Project) GetName() string        { return p.name }
+func (p *Project) GetDescription() string { return p.description }
+func (p *Project) GetTasks() []task.Task  { return p.tasks }
+
 func (p *Project) GetMembers() []person.Person { return p.members }
+
+func (p *Project) GetMemberByName(name string) (person.Person, error) {
+	// check if name is in format "firstName lastName"
+	if len(strings.Split(name, " ")) != 2 {
+		return person.Person{}, errors.New("Invalid name format")
+	}
+	firstName := strings.Split(name, " ")[0]
+	lastName := strings.Split(name, " ")[1]
+
+	for _, m := range p.members {
+		if m.GetFirstName() == firstName && m.GetLastName() == lastName {
+			return m, nil
+		}
+	}
+	return person.Person{}, errors.New("No match for " + name + " in project " + p.name)
+}
+
+/* ********************************************************************************************* */
 
 /* ********************************************************************************************* */
 
